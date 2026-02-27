@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>let arry =[];// thông qua index
+console.log(typeof array);
+
+// Object :Thuộc tính (key- tên của thuộc tính :value- gtri của thuộc tính)
+
+
+// khởi tạo Object 
+let peson ={};
+let person_v2 ={
+    id:0,
+    fullName :"Cuong",
+    age:19,
+    sex:"Male",
+
+
+};
+console.log(person_v2);
+
+//CRUD: Create- Read-Update-Delete
+//Read
+console.log(`tên của bạn là:${ person_v2.fullname}`);
+
+//Dot notation vs Bracket notation
+//c1: Dot notation
+console.log(`tên của bạn là:${ person_v2.fullname}`);
+//c2
+onsole.log(`tên của bạn là:${ person_v2["full Name"]}`);
+
+//Create
+person_v2.email ="cuongdz@gmail.com";
+console.log(person_v2)
+//update
+person_v2.age =20;
+//delete
+delete person_v2["Name"];
+console.log(person_v2);
+ 
+
+let animalDog ={
+    name:"quynh",
+    age:5,
+};
+let animalCat ={
+    ...animalDog,
+    id:0,
+};
+console.log(animalCat);
+
+//Array Object
+const player =[
+    {id :0 ,name:"Cường",age:19,goals:-1},
+     {id :1 ,name:"Quynh",age:19,goals:0},
+];
+//In ra mh các cầu thủ phản lưới nhà(goal<0)
+let listPlayer=player.filter((player) =>{
+    return player.goals < 0;
+});
+console.log(listPlayer);
+listPlayer.forEach((player) => {
+    console.log(`${player.name} -${player.goal}`);
+});
+
+//Object lồng
+let person_max ={
+    id:1,
+    fulolName:{
+        firstName:"cuong",
+        lastName:"cuongdz",}
+
+    };
+
+console.log(person_max.fullName.firstName);
+
+
+//Duyệt qua Object
+Object.keys(person_v2);
+console.log(Object.keys(person_v2));
+console.log(Object.values(person_v2));
+console.log(Object.entries(person_v2));
+</script>
+</body>
+</html>
